@@ -25,13 +25,35 @@
     display: flex;
     flex-direction: column;
     min-height: 100%;
+    background-color: #f9fafb;
+}
+
+.form-container .info-message,
+.form-container .button-container {
+    padding-left: 5%;
 }
 
 .info-message {
     flex: 1 1 0;
     justify-content: center;
+    text-align: left;
     display: flex;
     flex-direction: column;
+    font-size: 32px;
+    font-weight: bold;
+    font: arial, monospace, sans-serif;
+}
+
+.info-message p:nth-child(2) {
+    margin-bottom: 5%;
+}
+
+.info-message p:first-child {
+    margin-top: 5%;
+}
+
+.info-message p {
+    max-width: 80%;
 }
 
 .form {
@@ -40,9 +62,36 @@
     flex: 2 1 0;
 }
 
+.form-message {
+    background-color: #FFF;
+    padding: 2% 0 1% 5%;
+    align-items: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+
 .form-fields {
     display: flex;
-    flex-wrap: wrap;
+    flex: 1 1 0;
+    gap: 5%;
+    background-color: #FFF;
+    box-shadow: 5px 5px 5px #e0e1e2;
+    padding-left: 5%;
+}
+
+.set-one,
+.set-two {
+    display: flex;
+    flex-direction: column;
+}
+
+.set-one input:nth-child(-n + 4),
+.set-two input:nth-child(-n + 4) {
+    margin-bottom: 15%;
+}
+
+.button-container {
+    flex: 1 1 0;
 }
 
 .logo {
