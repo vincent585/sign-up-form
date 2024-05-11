@@ -22,6 +22,27 @@
 
 .form-container {
     flex: 2 1 70%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.info-message {
+    flex: 1 1 0;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    flex: 2 1 0;
+}
+
+.form-fields {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .logo {
