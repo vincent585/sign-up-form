@@ -108,6 +108,14 @@
     margin-bottom: 7%;
 }
 
+.set-one input:focus,
+.set-two input:focus {
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 255, 0.5);
+    box-shadow: 3px 3px 3px #e0e1e2;
+    outline: none;
+}
+
 .button-container {
     flex: 1 1 60%;
 }
