@@ -78,7 +78,7 @@
 .form-fields {
     display: flex;
     flex: 1 1 40%;
-    gap: 5%;
+    gap: 2%;
     background-color: #FFF;
     box-shadow: 5px 5px 5px #e0e1e2;
     padding-left: 5%;
@@ -95,7 +95,6 @@
 .set-two {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     width: 30%;
 }
 
@@ -107,6 +106,7 @@
     min-height: 13%;
     margin-bottom: 7%;
     min-height: 0;
+    width: 80%;
 }
 
 .set-one input:focus,
@@ -119,6 +119,28 @@
 
 .button-container {
     flex: 1 1 60%;
+}
+
+.button-container button {
+    margin: 3% 0;
+    background-color: #596D48;
+    border: none;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 18px;
+    height: 50px;
+    padding: 0em 3em;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    box-shadow: 5px 5px 5px #e0e1e2;
+}
+
+.button-container a {
+    text-decoration: none;
+    color: #596D48;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .logo {
