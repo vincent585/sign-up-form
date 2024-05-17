@@ -8,7 +8,21 @@ form.addEventListener('submit', (event) => {
     password.setCustomValidity("* Passwords do not match");
     password.reportValidity();
     confirmPassword.classList.add("invalid");
-
     event.preventDefault();
   }
-})
+  else {
+    password.setCustomValidity("");
+    confirmPassword.classList.remove("invalid");
+  }
+});
+
+
+password.addEventListener('input', () => {
+  password.setCustomValidity("");
+  confirmPassword.classList.remove('invalid');
+});
+
+confirmPassword.addEventListener('input', () => {
+  password.setCustomValidity("");
+  confirmPassword.classList.remove('invalid');
+});
