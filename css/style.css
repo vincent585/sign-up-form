@@ -5,6 +5,12 @@
     font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
 @font-face {
     font-family: norseBold;
     src: url(../Norse-Bold.otf);
@@ -13,11 +19,11 @@
 .container {
     display: flex;
     min-height: 100vh;
+    overflow: hidden;
 }
 
 .logo-container {
-    flex: 1 2 30%;
-    min-height: 100%;
+    flex: 1 1 30%;
     position: relative;
 }
 
@@ -25,7 +31,6 @@
     flex: 2 1 70%;
     display: flex;
     flex-direction: column;
-    min-height: 100%;
     background-color: #f9fafb;
 }
 
@@ -40,7 +45,7 @@
     text-align: left;
     display: flex;
     flex-direction: column;
-    font-size: 32px;
+    font-size: 2em;
     font-weight: bold;
     font: arial, monospace, sans-serif;
 }
@@ -59,6 +64,7 @@
 
 .info-message p {
     max-width: 80%;
+    flex: 1 1 35%;
 }
 
 .form {
@@ -78,7 +84,7 @@
 .form-fields {
     display: flex;
     flex: 1 1 40%;
-    gap: 2%;
+    gap: 5%;
     background-color: #FFF;
     box-shadow: 5px 5px 5px #e0e1e2;
     padding-left: 5%;
@@ -103,16 +109,23 @@
     border-radius: 5px;
     border: 1px solid #E5E7EB;
     flex: 1 1 0;
-    min-height: 13%;
     margin-bottom: 7%;
-    min-height: 0;
-    width: 80%;
+    height: 10%;
+    width: 100%;
 }
 
 .set-one input:focus,
 .set-two input:focus {
     border-radius: 5px;
     border: 1px solid rgba(0, 0, 255, 0.5);
+    box-shadow: 3px 3px 3px #e0e1e2;
+    outline: none;
+}
+
+.set-two input:invalid,
+.set-two input:invalid {
+    border-radius: 5px;
+    border: 1px solid rgba(255, 0, 0, 0.5);
     box-shadow: 3px 3px 3px #e0e1e2;
     outline: none;
 }
@@ -136,11 +149,26 @@
     box-shadow: 5px 5px 5px #e0e1e2;
 }
 
+.button-container button:hover,
+.button-container button:active {
+    background-color: #86ad64;
+}
+
+.button-container button:active {
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
 .button-container a {
     text-decoration: none;
     color: #596D48;
     font-weight: bold;
     font-size: 18px;
+}
+
+.button-container a:hover,
+.button-container a:active {
+    color: #86ad64;
 }
 
 .logo {
@@ -169,4 +197,11 @@
 .logo-container img {
     width: 100%;
     height: 100%;
+}
+
+@media (max-width: 768px) {
+    .info-message {
+        max-height: none;
+        font-size: 24px;
+    }
 }
