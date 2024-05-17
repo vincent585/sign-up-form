@@ -112,6 +112,7 @@ body {
     margin-bottom: 7%;
     height: 10%;
     width: 100%;
+    padding: 1em;
 }
 
 .set-one input:focus,
@@ -122,8 +123,15 @@ body {
     outline: none;
 }
 
-.set-two input:invalid,
+.set-one input:invalid,
 .set-two input:invalid {
+    border-radius: 5px;
+    border: 1px solid rgba(255, 0, 0, 0.5);
+    box-shadow: 3px 3px 3px #e0e1e2;
+    outline: none;
+}
+
+.set-two input.invalid {
     border-radius: 5px;
     border: 1px solid rgba(255, 0, 0, 0.5);
     box-shadow: 3px 3px 3px #e0e1e2;
